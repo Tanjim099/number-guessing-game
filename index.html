@@ -1,0 +1,171 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guess Game</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main{
+            width: 300px;
+            background-color: darkturquoise;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgb(54, 54, 251);
+        }
+        .main01{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px 0px;
+            margin: 10px 0px;
+            gap: 5px;
+        }
+        input{
+            width: 120px;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgb(54, 54, 251);
+        }
+        button{
+            padding: 10px 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgb(54, 54, 251);
+            margin: 10px 5px;
+            cursor: pointer;
+        }
+        select{
+            padding: 5px 15px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgb(54, 54, 251);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3 id="result">Your Result</h3>
+        <select name="option" id="select">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+        <div class="main01">
+            <label>Enter Guess Number</label>
+            <input type="number" placeholder="Enter Guess Number" id="input">
+        </div>
+        <div>
+            <button id="check">Check</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script>
+        let result = document.getElementById("result");
+        let input = document.getElementById("input");
+        let checkBtn = document.getElementById("check");
+        let resetBtn = document.getElementById("reset");
+        let select = document.getElementById("select").value;
+        let option = document.querySelectorAll("option");
+
+        let easy = option[0] = Math.floor(Math.random()* 10);
+        let medium = option[0] = Math.floor(Math.random()* 100);
+        let hard = option[0] = Math.floor(Math.random()* 1000);
+
+        // let obj = {select.option[0] = Math.floor(Math.random()*10)}
+
+        let optionname1  ;
+        if(select == "Easy"){
+            optionname1 = 10;
+        }
+        else if(select == "Medium"){
+            optionname1 = 100;
+        }
+        else if(select == "Hard"){
+            optionname1 = 1000;
+        }
+        let computerGuess
+
+        function computerguesss(){
+            computerGuess = Math.floor(Math.random()* optionname1);
+        console.log(computerGuess);
+        }
+        computerguesss();
+
+        checkBtn.addEventListener("click", ()=>{
+            const userGuess = Number(input.value);
+            console.log(userGuess);
+            if(computerGuess === userGuess){
+                result.innerText = "You Won Game";
+            }else if(computerGuess>userGuess){
+                result.innerText = "Please Guess Greater Number";
+            }
+            else{
+                result.innerText = "Please Guess Smaller Number";
+            }
+
+        })
+
+        resetBtn.addEventListener("click",()=>{
+            input.value = "";
+            result.innerText = "Your Result";
+            computerguesss();
+        })
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Guess Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <h3 id="result">Your Result</h3>
+    <div class="container">
+      <div class="score">
+        <label>Your Score</label>
+        <span id="userscore">0</span>
+      </div>
+      <select name="option" id="select" onchange="changeOption()">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+      </select>
+      <div class="score">
+        <label>Bot Score</label>
+        <span id="computerscore">0</span>
+      </div>
+    </div>
+    <div class="main01">
+      <label>Enter Guess Number</label>
+      <input type="number" placeholder="Enter Guess Number" id="input" />
+    </div>
+    <div class="btn">
+      <button id="check">Check</button>
+      <button id="reset">Play Again</button>
+    </div>
+    <!-- <p>You Win <span id="userwin">0</span></p> -->
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

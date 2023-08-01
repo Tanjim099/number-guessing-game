@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://img.freepik.com/free-vector/geometric-shapes-neon-lights-background_23-2148437807.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    width: 400px;
+    /* background-color: darkturquoise; */
+    background-image: linear-gradient(to bottom right, rgb(0, 200, 255), rgb(0, 255, 221));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(54, 54, 251);
+    margin-top: 200px;
+}
+
+.main01 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    gap: 5px;
+    margin-bottom: 5px;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+input {
+    width: 120px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(54, 54, 251);
+}
+
+button {
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(54, 54, 251);
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+select {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(54, 54, 251);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.score span {
+    font-size: 20px;
+    padding: 3px;
+    /* border: 3px solid black; */
+    background-color: aliceblue;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(54, 54, 251);
+}
+
+.score label {
+    margin-bottom: 5px;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.btn {
+    padding-bottom: 10px;
+}
